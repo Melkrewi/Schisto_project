@@ -1,0 +1,8 @@
+5.sorted.bam
+9.sorted.bam
+11.sorted.bam
+12.sorted.bam
+15.sorted.bam
+19.sorted.bam
+20.sorted.bam
+21.sorted.bam
