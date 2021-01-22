@@ -1,4 +1,4 @@
-#Bowtie2 count perfect matches to improved assembly
+#Bowtie2 count perfect matches to the improved assembly
 
 module load java
 module load bowtie2/2.3.4.1
