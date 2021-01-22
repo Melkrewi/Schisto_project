@@ -1,5 +1,6 @@
-module load java
+#Running the kmer pipeline
 
+module load java
 module load bbmap
 
 kmercountexact.sh k=27 in1=40641_GTCCGC_1_paired.fq.gz in2=40641_GTCCGC_2_paired.fq.gz out=female_dna_mer_1.fa
@@ -25,3 +26,6 @@ bbduk.sh k=27 in=SRR4267990_trimmed.fq.gz outm=schistosomula_specific_rna_reads_
 bbduk.sh k=27 in=SRR4279491_trimmed.fq.gz outm=schistosomula_specific_rna_reads_2.fastq ref=v_v_female_specific_mers.fasta minkmerfraction=0.4
 
 bbduk.sh k=27 in1=SRR1421523_1.fastq in2=SRR1421523_2.fastq outm1=mature_adult_specific_rna_reads_1_1.fastq outm2=mature_adult_specific_rna_reads_1_2.fastq ref=v_v_female_specific_mers.fasta minkmerfraction=0.4
+
+#concatenate the following files:
+cat schistosomula_specific_rna_reads_1.fastq schistosomula_specific_rna_reads_2.fastq > female_specific_rna_reads.fastq
