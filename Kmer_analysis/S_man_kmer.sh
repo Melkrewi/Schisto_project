@@ -1,3 +1,16 @@
+#Pooling the different life stages together
+cat SRR3223434_trimmed.fq SRR3223443_trimmed.fq SRR3223447_trimmed.fq > csi_1.fq
+cat SRR3223435_trimmed.fq SRR3223444_trimmed.fq SRR3223448_trimmed.fq > csi_2.fq
+cat ERR506083_forward_paired.fq.gz ERR506084_forward_paired.fq.gz > ERR50608_1.fq.gz
+cat ERR506083_reverse_paired.fq.gz ERR506084_reverse_paired.fq.gz > ERR50608_2.fq.gz
+cat ERR506083_forward_paired.fq.gz ERR506083_reverse_paired.fq.gz > ERR506083.fq.gz
+gunzip ERR506083.fq.gz
+cat ERR506083.fq csi_1.fq > csim_1.fq
+cat ERR506084_forward_paired.fq.gz ERR506084_reverse_paired.fq.gz > ERR506084.fq.gz
+gunzip ERR506084.fq.gz
+cat ERR506084.fq csi_2.fq > csim_2.fq
+
+#Running the Kmer pipeline
 module load java
 module load bbmap
 
@@ -20,3 +33,6 @@ bbduk.sh k=27 in=csi_1.fq outm=female_specific_rna_reads_1.fastq ref=v_v_female_
 bbduk.sh k=27 in=csi_2.fq outm=female_specific_rna_reads_2.fastq ref=v_v_female_specific_mers.fasta minkmerfraction=0.4
 
 bbduk.sh k=27 in1=ERR50608_1.fq.gz in2=ERR50608_2.fq.gz outm1=mature_adult_specific_rna_reads_1.fastq outm2=mature_adult_specific_rna_reads_2.fastq ref=v_v_female_specific_mers.fasta minkmerfraction=0.4
+
+#concatenate the female_specific_rna_read files
+cat female_specific_rna_reads_1.fastq female_specific_rna_reads_2.fastq > female_specific_rna_reads.fastq
