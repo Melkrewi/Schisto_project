@@ -1,0 +1,33 @@
+#maximal read length
+
+max_rd_len=101
+
+[LIB]
+
+#maximal read length in this lib
+
+rd_len_cutof=101
+
+#average insert size
+
+avg_ins=50
+
+#if sequence needs to be reversed
+
+reverse_seq=0
+
+#in which part(s) the reads are used
+
+asm_flags=3
+
+#minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+
+map_len=32
+
+#fastq file for read 1
+
+q1=mature_adult_specific_rna_reads_1_1.fastq
+
+q2=mature_adult_specific_rna_reads_1_2.fastq
+
+q=female_specific_rna_reads.fastq
