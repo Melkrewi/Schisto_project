@@ -1,0 +1,169 @@
+#maximal read length
+max_rd_len=150
+[LIB]
+#maximal read length in this lib
+rd_len_cutof=150
+#average insert size
+avg_ins=0
+#if sequence needs to be reversed 
+reverse_seq=0
+#in which part(s) the reads are used
+asm_flags=3
+#minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=52
+#fastq file for read 1 
+q=SRR4296944.fastq
+
+[LIB]
+#maximal read length in this lib
+rd_len_cutof=150
+#average insert size
+avg_ins=0
+#if sequence needs to be reversed 
+reverse_seq=0
+#in which part(s) the reads are used
+asm_flags=3
+#minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=52
+#fastq file for read 1 
+q=SRR4296942.fastq
+
+[LIB]
+#maximal read length in this lib
+rd_len_cutof=150
+#average insert size
+avg_ins=0
+#if sequence needs to be reversed 
+reverse_seq=0
+#in which part(s) the reads are used
+asm_flags=3
+#minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=52
+#fastq file for read 1 
+q=SRR4296940.fastq
+
+[LIB]
+#maximal read length in this lib
+rd_len_cutof=150
+#average insert size
+avg_ins=0
+#if sequence needs to be reversed 
+reverse_seq=0
+#in which part(s) the reads are used
+asm_flags=3
+#minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=52
+#fastq file for read 1 
+q=SRR4296938.fastq
+
+[LIB]
+#maximal read length in this lib
+rd_len_cutof=150
+#average insert size
+avg_ins=0
+#if sequence needs to be reversed 
+reverse_seq=0
+#in which part(s) the reads are used
+asm_flags=3
+#minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=52
+#fastq file for read 1 
+q=SRR4296936.fastq
+
+[LIB]
+#maximal read length in this lib
+rd_len_cutof=150
+#average insert size
+avg_ins=0
+#if sequence needs to be reversed 
+reverse_seq=0
+#in which part(s) the reads are used
+asm_flags=3
+#minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=52
+#fastq file for read 1 
+q=SRR4296934.fastq
+
+[LIB]
+#maximal read length in this lib
+rd_len_cutof=150
+#average insert size
+avg_ins=0
+#if sequence needs to be reversed 
+reverse_seq=0
+#in which part(s) the reads are used
+asm_flags=3
+#minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=52
+#fastq file for read 1 
+q=SRR4296931.fastq
+
+[LIB]
+#maximal read length in this lib
+rd_len_cutof=150
+#average insert size
+avg_ins=0
+#if sequence needs to be reversed 
+reverse_seq=0
+#in which part(s) the reads are used
+asm_flags=3
+#minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=52
+#fastq file for read 1 
+q=SRR4292306.fastq
+
+[LIB]
+#maximal read length in this lib
+rd_len_cutof=150
+#average insert size
+avg_ins=0
+#if sequence needs to be reversed 
+reverse_seq=0
+#in which part(s) the reads are used
+asm_flags=3
+#minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=52
+#fastq file for read 1 
+q=SRR4292301.fastq
+
+[LIB]
+#maximal read length in this lib
+rd_len_cutof=150
+#average insert size
+avg_ins=0
+#if sequence needs to be reversed 
+reverse_seq=0
+#in which part(s) the reads are used
+asm_flags=3
+#minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=52
+#fastq file for read 1 
+q=SRR4292299.fastq
+
+[LIB]
+#maximal read length in this lib
+rd_len_cutof=150
+#average insert size
+avg_ins=0
+#if sequence needs to be reversed 
+reverse_seq=0
+#in which part(s) the reads are used
+asm_flags=3
+#minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=52
+#fastq file for read 1 
+q=SRR4292292.fastq
+
+[LIB]
+#maximal read length in this lib
+rd_len_cutof=150
+#average insert size
+avg_ins=0
+#if sequence needs to be reversed 
+reverse_seq=0
+#in which part(s) the reads are used
+asm_flags=3
+#minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=52
+#fastq file for read 1 
+q=SRR4292206.fastq
