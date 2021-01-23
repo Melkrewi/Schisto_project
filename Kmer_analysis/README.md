@@ -17,5 +17,6 @@ soapconfig_Sjaponicum.txt: the config file for SOAPdenovo-trans (S. japonicum)
 
 SOAPdenovo_trans_Sjap.sh: the script to run SOAPdenovo-trans (S. japonicum)
 
-#note 
+## note 
+
 The read libraries for both species were trimmed using Trimmomatic, except (SRR1421523 and SRR1421524) due to human error. However, we check that it did not affect the results afterwards. 
