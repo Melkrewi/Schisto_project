@@ -1,4 +1,4 @@
-## Description of files:
+## Description of the files:
 Kmer_pipeline.pdf the flow chart of the kmer analysis process
 
 Sman_list_of_libraries.txt the list of the public genomic/RNA-seq libraries used in the (S. mansoni) kmer analysis
