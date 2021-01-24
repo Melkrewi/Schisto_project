@@ -1,5 +1,5 @@
 ## Description of the files/folders:
-Transcriptome curation.pdf: flowchart of the curation process 
+Transcriptome_curation.pdf: flowchart of the curation process 
 
 Sjap_Kallisto: has the script used to curate the published S. japonicum transcriptome for the expression analysis using Kallisto
 
