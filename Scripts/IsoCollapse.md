@@ -13,7 +13,7 @@ We take the following steps:
 
 The perl script is at:
 ```
-/archive3/group/vicosgrp/SharedScripts/Beatriz/SpliceFinder_2.pl
+[here](https://github.com/Melkrewi/Schisto_project/blob/main/Scripts/SpliceFinder_2.pl).
 ```
 
 Usage: 
