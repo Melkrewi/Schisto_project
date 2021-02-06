@@ -11,10 +11,8 @@ We take the following steps:
 
 ## Usage
 
-The perl script is at:
-```
-[here](https://github.com/Melkrewi/Schisto_project/blob/main/Scripts/SpliceFinder_2.pl).
-```
+The perl script is [here](https://github.com/Melkrewi/Schisto_project/blob/main/Scripts/SpliceFinder_2.pl).
+
 
 Usage: 
 
