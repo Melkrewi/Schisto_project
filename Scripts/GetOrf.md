@@ -24,7 +24,7 @@ transcripts.fasta.aa
 
 ## Get longest ORF per transcript
 
-The script is [here](scripts/scripts_GetLongestCDS_v2_October2020.pl).
+The script is [here](https://github.com/Melkrewi/Schisto_project/blob/main/Scripts/GetLongestCDS_v2_October2020.pl).
 
 Usage:
 ```
