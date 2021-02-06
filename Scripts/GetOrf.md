@@ -10,7 +10,7 @@ ORFs/proteins can start with any codon/AA (i.e. we do not require the CDS to sta
 
 ## Get longest protein sequence per transcript
 
-The script is [here](scripts/GetLongestAA_v1_July2020.pl).
+The script is [here](https://github.com/Melkrewi/Schisto_project/blob/main/Scripts/GetLongestAA_v1_July2020.pl).
 
 Usage:
 ```
