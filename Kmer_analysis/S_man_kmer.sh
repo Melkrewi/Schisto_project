@@ -14,6 +14,7 @@ cat ERR506084.fq csi_2.fq > csim_2.fq
 module load java
 module load bbmap
 
+kmer=31
 echo "### Step 0: Kmer pipeline starting"
 kmercountexact.sh k=$kmer in1=ERR562990_forward_paired.fq.gz in2=ERR562990_reverse_paired.fq.gz out=female_dna_mer_1.fa
 
