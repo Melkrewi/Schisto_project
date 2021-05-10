@@ -1,7 +1,14 @@
-for (( i = 1; i <= 75; i++ ))
+echo "### Step 7: Finding the Z candidates"
 
-do
+module load blat
+blat -minScore=50 Trinity_cap3.fasta final_w_japonicum.fasta W_vs_trinity.blat -t=dnax -q=dnax
 
-sed -n "$i"p names_z_candidates.txt | cut -f 1 | sort | uniq | ~/seqtk/seqtk subseq Trinity_cap3.fasta /dev/stdin >> Final_Set_Z_Candidates_Japonicum_07_11_2020.fasta
+sort -k 10 W_vs_trinity.blat > W_vs_trinity.blat.sorted
 
-done
+perl 2-besthitblat.pl W_vs_trinity.blat.sorted
+
+cat W_vs_trinity.blat.sorted.besthit | awk '($1>100)' > filtered_z.txt
+
+cat filtered_z.txt | cut -f 14 > names_z_candidates.txt
+
+perl -ne 'if(/^>(\S+)/){$c=$i{$1}}$c?print:chomp;$i{$_}=1 if @ARGV' names_z_candidates.txt Trinity_cap3.fasta > Final_Set_Z_Candidates_japonicum.fasta
