@@ -1,5 +1,5 @@
 ###############################################
-# Supplementary Code 4: Strata Identification #
+# Strata Identification #
 ###############################################
  
 ### 4.1 De novo determination of Z-specific regions in S. mansoni 
