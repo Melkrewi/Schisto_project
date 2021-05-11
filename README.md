@@ -1,7 +1,7 @@
 # Schisto_project
 Supplementary Code for Moldovan & Elkrewi et al. 
 
-This repository included all the scripts and commands used in the analysis for Moldovan & Elkrewi et al. If anything is missing or not clear, please do not hesitate to reach out to us, and we will do out best to fix the issue or clarify.
+This repository includeS all the scripts and commands used in the analysis for Moldovan & Elkrewi et al. If anything is missing or not clear, please do not hesitate to reach out to us, and we will do out best to fix the issue or provide more details.
 
 Below is a rough guide to the content of each folder:
 
