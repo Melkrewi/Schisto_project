@@ -2,7 +2,7 @@
 # Strata Identification #
 ###############################################
  
-### 4.1 De novo determination of Z-specific regions in S. mansoni 
+### De novo determination of Z-specific regions in S. mansoni 
 
 1.bowtie2_mansoni.sh script needs as inputs: male and female DNA reads + fasta file of the reference genome
 
@@ -16,7 +16,7 @@
 
 * InputFile4_mansoni-gene-coordinates.csv is used as input for the script titled 4.GeneSelector.pl 
 
-### 4.2 Inference of the location of  S. japonicum scaffolds along the S. mansoni Z-chromosome
+### Inference of the location of  S. japonicum scaffolds along the S. mansoni Z-chromosome
 
 5.blat.sh script needs as inputs: the CDS of S. mansoni as fasta file + the genome of S. japonicum as fasta file
 
