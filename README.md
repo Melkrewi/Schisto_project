@@ -26,14 +26,12 @@ The script for identifying and generating a fasta file with the the S. japonicum
 * We detected the genetic variants (SNPs) in the samples using the BCFtools mpileup function, filtered the output for minimum and maximum read coverage and mapping quality using VCFtools, and removed multi-allelic sites using BCFtools, then estimated the per-site FST between males and females using VCFtoolsas using in [SNP_calling.sh](https://github.com/Melkrewi/Schisto_project/blob/Revised/Fst_Analysis/SNP_calling.sh). 
 * The calculation of the per-site FST between males and females was performed using VCFtools, and the output was used to calculate the mean FST values between the male and female samples for each scaffold using [meanFst_per_scaffold.r](https://github.com/Melkrewi/Schisto_project/blob/Revised/Fst_Analysis/meanFst_per_scaffold.r).
 
-Supplementary Code 4: Strata Identification
-Supplementary Code 5: A description of the process we followed to perform the FST analysis, from identifying the sex of the Miracidia samples to calculating FST
-Supplementary Code 6: Estimating the Rates of Evolution of ZW homologs in S. mansoni
-Supplementary Code 7: Estimating the Rates of Evolution of ZW homologs in S. japonicum
-Supplementary Code 8: S. mansoni Transcriptome Curation for OrthoFinder
-Supplementary Code 9: S. japonicum Transcriptome Curation for OrthoFinder
-Supplementary Code 10: Running OrthoFinder
-Supplementary Code 11: S. mansoni transcriptome curation for Kallisto
-Supplementary Code 12: S. japonicum transcriptome curation for Kallisto
-Supplementary Code 13: Running Kallisto S. mansoni
-Supplementary Code 14: Running Kallisto S. japonicum
+## dNdS
+
+## Transcriptome_curation
+
+## OrthoFinder
+
+## Kallisto
+
+## Transcriptome_Assemblies
