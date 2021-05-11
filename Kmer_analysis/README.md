@@ -19,4 +19,4 @@ SOAPdenovo_trans_Sjap.sh: the script to run SOAPdenovo-trans (S. japonicum)
 
 ## Note 
 
-The read libraries for both species were trimmed using Trimmomatic, except (SRR1421523 and SRR1421524) due to human error. However, we checked that it did not affect the results afterwards. 
+All the read libraries for both species were trimmed using Trimmomatic.
