@@ -49,4 +49,8 @@ This folder includes a [flowchart](https://github.com/Melkrewi/Schisto_project/b
 ## Kallisto
 
 ## Transcriptome_Assemblies
+This folder has the steps we followed to assemble: 
+* The female transcriptome used to improve assembly of the S. japonicum W-candidates. The libararies we used can be found in [libraries.txt](https://github.com/Melkrewi/Schisto_project/blob/main/Transcriptome_Assemblies/Female_Sjap_transcriptome/libraries.txt), along with [the config file](https://github.com/Melkrewi/Schisto_project/blob/main/Transcriptome_Assemblies/Female_Sjap_transcriptome/soapconfig_trans.txt) and [the assembly script](https://github.com/Melkrewi/Schisto_project/blob/main/Transcriptome_Assemblies/Female_Sjap_transcriptome/SOAPdenovotrans.sh).
+
+* The male transcriptome used to recover the Z-candidates. We trimmed the male reads (SRR8175618) with [the Trimmomatic package](https://github.com/Melkrewi/Schisto_project/blob/main/Transcriptome_Assemblies/Male_Sjap_transcriptome/Trimmomatic.sh) and then assembled them using [Trinity](https://github.com/Melkrewi/Schisto_project/blob/main/Transcriptome_Assemblies/Male_Sjap_transcriptome/Assembly_Trinity.sh) followed by [Cap3](https://github.com/Melkrewi/Schisto_project/blob/main/Transcriptome_Assemblies/Male_Sjap_transcriptome/Assembly_Cap3.sh).
 
