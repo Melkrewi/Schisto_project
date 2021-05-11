@@ -13,31 +13,31 @@ $line0="";
 
 while ($line = <INPUT>) {
 ($match, $mismatch, $rep, $Ns, $Qgapcount, $Qgapbases, $Tgapcount, $Tgapbases, $strand, $Qname, $Qsize, $Qstart, $Qend, $Tname, $Tsize, $Tstart, $Tend, $blockcount, $blockSizes, $qStarts, $tStarts)=split(/\t/, $line);
-	
-	if ($Qname eq $name0)
-		{
-		if ($match > $score0)
-			{
-			$name0=$Qname;
-			$score0=$match;
-			$line0=$line;
-			}
-		else
-			{
-			}
+    
+    if ($Qname eq $name0)
+        {
+        if ($match > $score0)
+            {
+            $name0=$Qname;
+            $score0=$match;
+            $line0=$line;
+            }
+        else
+            {
+            }
 
-		}
-	else
-		{
-		print RESULTS $line0;
-		$name0=$Qname;
+        }
+    else
+        {
+        print RESULTS $line0;
+        $name0=$Qname;
                 $score0=$match;
                 $line0=$line;
 
-		}
-		
-	
-	}
+        }
+        
+    
+    }
 
 print RESULTS $line0;
 

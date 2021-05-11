@@ -5,12 +5,12 @@
 ################################################################
 
 ## Set-up parameters
-output="/home/marion/Bureau/SchistoPaper_TODO_24-01/Mat&Met/Rfiles/" ##Here indicate your outputfile name
+output="~/path-to-output” ## Here indicate your outputfile 
 spe="Smans" ##Here indicate the abbreviation of the studied species
 
 ## Read data
-x=read.table("/home/marion/Bureau/SchistoPaper_TODO_24-01/Mat&Met/Rfiles/InputFile1_Smansoni_SoapCov_By10kb_ForR_NewG.csv",h=T) ##Here indicate your input table (5 columns modified SoapCoverage output)
-head(x) #5columns: #Scaffold_ID #Window_start #Window_stop #ERR562990_Depth (i.e. female coverage) #ERR562989_Depth (i.e. male coverage)
+x=read.table("~/path-to-input/InputFile1_Smansoni_SoapCov_By10kb_ForR_NewG.csv",h=T) ##Here indicate your input table (5 columns modified SoapCoverage output)
+head(x) #5columns: $Scaffold_ID $Window_start $Window_stop $ERR562990_Depth (i.e. female coverage) $ERR562989_Depth (i.e. male coverage)
 tail(x) #5columns
 nrow(x) #40958rows==number of analysed windows out of SoapCoverage analysis
 
@@ -46,7 +46,7 @@ abline(v=minCov_Aut,col="sienna2",lwd=2,lty=2)
 text((minCov_Aut_Graph-0.05),1000,paste("2.5%min_Aut: ", minCov_Aut_Graph),srt=90,col="sienna2")
 text((maxCov_Aut_Graph-0.05),1000,paste("2.5%max_Aut: ", maxCov_Aut_Graph),srt=90,col="gray37")
 
-## Vizualizing first step filter
+## Visualizing first step filter
 
 # Subset Chr_ZW
 x_ZW  <- subset(x, x$Scaffold_ID=='SM_V7_ZW') 
@@ -74,13 +74,13 @@ nrow(subset(x_ZW,x_ZW$flag=="PAR")) #5431
 nrow(subset(x_ZW,x_ZW$flag=="Z")) #3337
 nrow(subset(x_ZW,x_ZW$flag=="Ambiguous")) #71
 
-#Write filtered final table with flags
+# Write filtered final table with flags
 coln=NULL ; for(j in 1:length(colnames(x_ZW))){coln <- c(coln,paste(colnames(x_ZW)[j],spe,sep="_"))}
 write.table(x_ZW,paste(output,"InputFile2_Zonly_10kb",".txt",sep=""),col.names=coln,row.names=F)
 
-################################################################
-## STEP2: Loci assignment based on 1% coverage of Zcandidates ##
-################################################################
+#################################################################
+## STEP2: Loci assignment based on 1% coverage of Z-candidates ##
+#################################################################
 
 ## Read data
 x_Z=read.table(paste(output,"InputFile2_Zonly_10kb",".txt",sep=""),h=T,fill=TRUE)
@@ -105,7 +105,7 @@ abline(v=minCov_Z,col="sienna2",lwd=2,lty=2)
 text(-1.15,100,paste("1%min_Z: ", minCov_Z_Graph),srt=90,col="sienna2")
 text(-0.43,100,paste("1%max_Z: ", maxCov_Z_Graph),srt=90,col="gray37")
 
-## Vizualizing second step filter
+## Visualizing second step filter
 x=read.table("/home/marion/Bureau/SchistoPaper_TODO_24-01/Mat&Met/Rfiles/InputFile1_Smansoni_SoapCov_By10kb_ForR_NewG.csv",h=T) ##Here indicate your input table (5 columns modified SoapCoverage output)
 x$log2_FMcoverage <- log2(x$ERR562990_Depth/x$ERR562989_Depth)
 x_ZW  <- subset(x, x$Scaffold_ID=='SM_V7_ZW') 
@@ -117,3 +117,5 @@ plot(as.numeric(paste(x_ZW$Window_start)), log2(as.numeric(paste(x_ZW$ERR562990_
 abline(h=minCov_Aut, col="sienna2", lty=2, lwd=2)
 abline(h=maxCov_Z, col="gray37", lty=2, lwd=2)
 legend(x="bottomright",paste(c("2.5% min_Aut","1% max_Z","Non-Zlinked","Zlinked","Ambiguous")),pch=c(NA,NA,16,16,16),lty=c(2,2,NA,NA,NA),lwd=c(2,2,NA,NA,NA),col=c("sienna2","gray37","gray37","sienna2","antiquewhite2"),bty="n")
+
+

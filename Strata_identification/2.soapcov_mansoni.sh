@@ -4,14 +4,13 @@
 
 #SBATCH --job-name="soapcov"
 #SBATCH --output=soapcov.out
-
 #SBATCH --mem=50G
 #SBATCH --time=24:00:00
 
 # MORE INFOS
 
 #-# last edit: 13-11-2020
-#-# usage: qsub 4.soapcov_mansoni.sh 
+#-# usage: qsub 2.soapcov_mansoni.sh 
 #-# prog required: soap coverage
 
 ### START
@@ -21,9 +20,9 @@
 module load soap/coverage
 
 #define variable
-inf="/nfs/scistore03/vicosgrp/mpicard/NEW_strata/bowtie2_mansoni"
-genome="/nfs/scistore03/vicosgrp/mpicard/NEW_strata/mansoni/schistosoma_mansoni.PRJEA36577.WBPS14.genomic.fa"
-ouf="/nfs/scistore03/vicosgrp/mpicard/NEW_strata/soapcov_mansoni"
+inf="~/path-to-bowtie2-output"
+genome="~/path-to-the-genome/genome.fa"
+ouf="~/path-to-output"
 win=10000
 
 mkdir $ouf
@@ -46,7 +45,5 @@ do
 soap.coverage -sam -cvg -i ${l} -onlyuniq -refsingle $genome -o $ouf/${l}.soapcov -window $ouf/${l}.win10.soapcov 10000 
 done
 
-
 ###END
-
 
