@@ -30,12 +30,23 @@ The script for identifying and generating a fasta file with the the S. japonicum
 * The coding sequences of W-candidates of both species (and of their closest homolog in S. japonicum) were obtained with the command-line version of Genewise, using the protein sequence of the closest S. mansoni homolog as input. The script for S. mansoni can be found in [Genewise_Sman/genewise.sh](https://github.com/Melkrewi/Schisto_project/blob/main/dNdS/Genewise_Sman/genewise.sh) along with the [list of homologs](https://github.com/Melkrewi/Schisto_project/blob/Revised/dNdS/Genewise_Sman/names_for_genewise.txt), and for S. japoncium in [Genewise_Sjap/genewise.sh](https://github.com/Melkrewi/Schisto_project/tree/main/dNdS/Genewise_Sjap/genewise.sh) along with the [list of homologs](https://github.com/Melkrewi/Schisto_project/blob/Revised/dNdS/Genewise_Sjap/names_for_genewise.txt).
 
 * The coding sequences of W-candidates and their closest homolog (within the same species) were aligned with the TranslatorX package with the “gblocks” option to filter out unreliable sections of the alignment using [this script](https://github.com/Melkrewi/Schisto_project/blob/Revised/dNdS/TranslatorX.sh)
-* The dN and dS values were obtained with KaKs_calculator2.0 using [this script](https://github.com/Melkrewi/Schisto_project/blob/Revised/dNdS/KaKs_Calculator.sh).
+* The dN and dS values were obtained with KaKs_calculator2.0 using [this script](https://github.com/Melkrewi/Schisto_project/blob/main/dNdS/KaKs_Calculator.sh).
 
 ## Transcriptome_curation
+This folder includes a [flowchart](https://github.com/Melkrewi/Schisto_project/blob/main/Transcriptome_curation/Transcriptome%20curation.pdf) that describes the process we followed to curate the transcriptomes for OrthoFinder and Kallisto. Below is a brief description of the same process:
+* We used the in-house script [Splicefinder.pl](https://github.com/Melkrewi/Schisto_project/blob/Revised/Scripts/SpliceFinder_2.pl) to remove all the isoforms from the published transcriptomes of both species. 
+* We mapped our set of W-candidates and their homologs to their respective transcriptomes and removed any transcripts with matches > 100 bp and less than 5% divergence, and then we added our candidate set to the transcriptomes using the following scripts (the lists of the removed transcripts are provided in the same folder):
+  * [S. mansoni Orthofinder](https://github.com/Melkrewi/Schisto_project/blob/main/Transcriptome_curation/Sman_OrthoFinder/Trans_curation_for_OrthoFinder.sh)
+  * [s. japonicum Orthofinder](https://github.com/Melkrewi/Schisto_project/blob/main/Transcriptome_curation/Sjap_OrthoFinder/Trans_curation_for_OrthoFinder.sh)
+  * [S. mansoni Kallisto](https://github.com/Melkrewi/Schisto_project/blob/main/Transcriptome_curation/Sman_Kallisto/Trans_curation_for_Kallisto.sh)
+  * [S. japonicum Kallisto](https://github.com/Melkrewi/Schisto_project/blob/main/Transcriptome_curation/Sjap_Kallisto/Trans_curation_for_Kallisto.sh)
 
 ## OrthoFinder
+* We downloaded the coding sequences of Clonorchis sinensis from the WormBase Parasite database and used it as an outgroup. 
+* We used an in-house perl script [GetLongestAA_v1_July2020.pl](https://github.com/Melkrewi/Schisto_project/blob/main/Scripts/GetLongestAA_v1_July2020.pl) to perform 6-frame translation of all the transcripts and retain only the longest isoforms. 
+* Orthofinder was then run using the three transcriptomes to assign proteins to clusters of homologs (“orthogroups”) using [this script](https://github.com/Melkrewi/Schisto_project/blob/main/OrthoFinder/Running_OrthoFinder.sh).
 
 ## Kallisto
 
 ## Transcriptome_Assemblies
+
