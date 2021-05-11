@@ -11,6 +11,8 @@ This folder includes a flowchart that explains the generic k-mer pipeline we imp
 ## Filtering_the_W_candidates
 This folder has the steps we followed to filter the output of the kmer pipeline. It has two flowcharts explaining the general approach for each of the two species and the scripts used in the process.
 
+## Identifying_the_Z_candidates_Sjap
+The script for identifying and generating a fasta file with the the S. japonicum Z-candidates from the male transcriptome we assembled as described in the [Transcriptome_Assemblies/Male_Sjap_transcriptome](https://github.com/Melkrewi/Schisto_project/tree/Revised/Transcriptome_Assemblies/Male_Sjap_transcriptome) folder.
 ## Strata Identification
 
 
