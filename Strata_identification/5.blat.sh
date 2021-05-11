@@ -5,13 +5,13 @@
 #SBATCH --output=1.blat.out
 
 #-# last edit: 30-10-2020
-#-# usage: qsub 1.blat.sh
+#-# usage: qsub 5.blat.sh
 #-# prog required: BLAT_v36x1 
 #-# description: Align with BLAT 
-			
+            
 ## define variables:
-CDS="/nfs/scistore03/vicosgrp/mpicard/NEW_strata/mansoni/schistosoma_mansoni.PRJEA36577.WBPS14.CDS_transcripts.fa"
-GENOME="/nfs/scistore03/vicosgrp/mpicard/NEW_strata/japonicum/schistosoma_japonicum.PRJEA34885.WBPS14.genomic.fa"
+CDS="~/path-to-mansoni-CDS/schistosoma_mansoni.PRJEA36577.WBPS14.CDS_transcripts.fa"
+GENOME="~/path-to-japonicum-genome/schistosoma_japonicum.PRJEA34885.WBPS14.genomic.fa"
 
 ### start
 
