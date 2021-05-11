@@ -27,6 +27,9 @@ The script for identifying and generating a fasta file with the the S. japonicum
 * The calculation of the per-site FST between males and females was performed using VCFtools, and the output was used to calculate the mean FST values between the male and female samples for each scaffold using [meanFst_per_scaffold.r](https://github.com/Melkrewi/Schisto_project/blob/Revised/Fst_Analysis/meanFst_per_scaffold.r).
 
 ## dNdS
+* The coding sequences of W-candidates of both species (and of their closest homolog in S. japonicum) were obtained with the command-line version of Genewise, using the protein sequence of the closest S. mansoni homolog as input. The script for S. mansoni can be found in [Genewise_Sman/genewise.sh](https://github.com/Melkrewi/Schisto_project/blob/main/dNdS/Genewise_Sman/genewise.sh), and for S. japoncium in [Genewise_Sjap/genewise.sh](https://github.com/Melkrewi/Schisto_project/tree/Revised/dNdS/Genewise_Sjap/genewise.sh).
+
+The coding sequences of W-candidates and their closest homolog (within the same species) were aligned with the TranslatorX package (Abascal et al. 2010) with the “gblocks” option to filter out unreliable sections of the alignment. The dN and dS values were obtained with KaKs_calculator2.0 (Wang et al. 2010) using the Yang Nielsen algorithm (YN). For the dN/dS and dS between ZW pairs of S. mansoni and S. japonicum (Figure 2A), we only considered the KaKs_calculator2.0’s estimates for pairs with 300 sites or more, and dS above 0 (Sup. Dataset 4).
 
 ## Transcriptome_curation
 
