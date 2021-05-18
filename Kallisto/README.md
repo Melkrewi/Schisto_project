@@ -1,5 +1,5 @@
 ############################################################
-# Supplementary Code 13: Expression analysis with Kallisto #
+# Expression analysis with Kallisto #
 ############################################################
 
 ### Expression analysis in S. mansoni
