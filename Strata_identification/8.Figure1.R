@@ -2,7 +2,6 @@
 rm(list=ls())
 
 ## Load libraries
-library(readxl)
 library(RColorBrewer)
 
 ## Define colors
@@ -60,16 +59,16 @@ x=as.numeric(paste(x_ZW$Window_start_Mb))
 y=log2(as.numeric(paste(x_ZW$ERR562990_Depth))/as.numeric(paste(x_ZW$ERR562989_Depth)))  
 plot(x, y, col=colF, pch=16, ylim=c(-1.8,1.25),xlim=c(0,90.000000),cex.axis=1.5, cex.lab=1.5,adj="0.5", xlab='Position on S.mansoni Z-chromosome (Mb)', ylab='log2(F:M)coverage - S. mansoni')
 legend(x="bottomright",paste(c("S1man","S0man",'PAR')),pch=c(16,16),col=c(color_S1mans_light,color_S0mans_light,color_PAR),bty="n")
-  
+    
 # All W candidates
-dNdStable_mansoni <- read.table("ZW_pairs_dNdS_with_strata_assignments.xlsx", header=TRUE, sep=",") #table here: https://seafile.ist.ac.at/d/063ac650aca44ea09346/files/?p=%2FDataset4_ZWpairs_dNdS%2FZW_pairs_dNdS_with_strata_assignments.xlsx
+dNdStable_mansoni <- read.table("Dataset4_ZW_pairs_dNdS_with_strata_assignments_mansoni.csv", header=TRUE,sep=",")
 head(dNdStable_mansoni)
 W <- subset(dNdStable_mansoni,dNdStable_mansoni$First_base_GFF_mans!="NA")
 head(W)
 nrow(W) #34
-W$First_base_GFF_mans_Mb <- as.numeric(W$First_base_GFF_mans)/1000000
+W$First_base_GFF_mans <- as.numeric(W$First_base_GFF_mans)/1000000
 par(new = T) 
-W_lines <- W$First_base_GFF_mans_Mb
+W_lines <- W$First_base_GFF_mans
 abline(v=W_lines, col=color_W, lty=1, lwd=1)
   
 # Add strata coordinates
@@ -123,14 +122,14 @@ y=as.numeric(CovData$log2FMcov)
 plot(x, y, pch=16, col=colF_jap, ylim=c(-1.8,1.25), ylab="log2(F:M)coverage - S. japonicum",xlim=c(0,90.000000),adj="0.5", cex.axis=1.5, cex.lab=1.5, xlab="Position on S.mansoni Z-chromosome (Mb)")
 legend(x="bottomright",paste(c("S1jap","S0jap",'PAR')),pch=c(16,16),col=c(color_S1jap_light,color_S0jap_light,color_PAR),bty="n")
     
-dNdStable_mansoni <- read.table("ZW_pairs_dNdS_with_strata_assignments.xlsx", header=TRUE, sep=",") #table here: https://seafile.ist.ac.at/d/063ac650aca44ea09346/files/?p=%2FDataset4_ZWpairs_dNdS%2FZW_pairs_dNdS_with_strata_assignments.xlsx
-head(dNdStable_mansoni)
-W <- subset(dNdStable_mansoni,dNdStable_mansoni$First_base_GFF_mans!="NA")
+dNdStable_japonicum <- read.table("Dataset4_ZW_pairs_dNdS_with_strata_assignments_japonicum.csv", header=TRUE, sep=",")
+head(dNdStable_japonicum)
+W <- subset(dNdStable_japonicum,dNdStable_japonicum$First_base_GFF_mans!="NA")
 head(W)
 nrow(W) #54
-W$First_base_GFF_mans_Mb <- as.numeric(W$First_base_GFF_mans)/1000000
+W$First_base_GFF_mans <- as.numeric(W$First_base_GFF_mans)/1000000
 par(new = T) 
-W_lines <- W$First_base_GFF_mans_Mb
+W_lines <- W$First_base_GFF_mans
 abline(v=W_lines, col=color_W, lty=1, lwd=1)
     
 # Add strata coordinates
@@ -157,7 +156,7 @@ text(x=-2,y=(1.10+1.30)/2,labels="B.",adj=c(0.5,0.5),col="black", font=2, cex=1.
 #############
 
 ## Open table to calculate FST90 value
-FST_Data_all <- read.csv("MEANfst_per_scaffold_Sjap.txt", sep="") # table here: https://seafile.ist.ac.at/d/063ac650aca44ea09346/files/?p=%2FDataset6_S_jap_Genome_Fst%2FMEANfst_per_scaffold_Sjap.txt
+FST_Data_all <- read.csv("Dataset6_S_jap_Genome_Fst", sep="")
 hist(as.numeric(FST_Data_all$mean_fst), breaks=200, col="gray37",border="gray50", main="", xlab="")
 FST90_all <- quantile(as.numeric(FST_Data_all$mean_fst),0.90)
 FST90_all
