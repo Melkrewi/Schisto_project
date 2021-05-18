@@ -1,5 +1,5 @@
 ###############################################
-# Strata Identification #
+# Supplementary Code 4: Strata Identification #
 ###############################################
  
 ### De novo determination of Z-specific regions in S. mansoni 
@@ -24,4 +24,4 @@
 
 7.blatreverse.pl script needs as inputs: the output of script 6, sorted by target name (column 14)
 
-8.Figure1.R script needs as inputs: InputFile5_Smansoni_SoapCov_By10kb_ForR_NewG_onlyZW.csv + InputFile6_Sjaponicum_coverage_FST.csv + supplementary dataset 4 (ZW_pairs_dNdS_with_strata_assignments.xlsx) + supplementary dataset 6 (MEANfst_per_scaffold_Sjap.txt)
+8.Figure1.R script needs as inputs: InputFile5_Smansoni_SoapCov_By10kb_ForR_NewG_onlyZW.csv + Dataset4_ZW_pairs_dNdS_with_strata_assignments_mansoni.csv + InputFile6_Sjaponicum_coverage_FST.csv + Dataset4_ZW_pairs_dNdS_with_strata_assignments_japonicum.csv + Dataset6_S_jap_Genome_Fst
