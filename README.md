@@ -14,8 +14,7 @@ This folder has the steps we followed to filter the output of the kmer pipeline.
 ## Identifying_the_Z_candidates_Sjap
 The script for identifying and generating a fasta file with the the S. japonicum Z-candidates from the male transcriptome we assembled as described in the [Transcriptome_Assemblies/Male_Sjap_transcriptome](https://github.com/Melkrewi/Schisto_project/tree/main/Transcriptome_Assemblies/Male_Sjap_transcriptome) folder.
 ## Strata Identification
-
-
+Detailed description of the strata identification, along with the scripts and input files can be found [here](https://github.com/Melkrewi/Schisto_project/tree/main/Strata_identification)
 ## Fst_Analysis
 
 * We downloaded whole genome sequencing data of [22 S. japonicum individual Miracidia samples (PRJNA650045)](https://github.com/Melkrewi/Schisto_project/blob/main/Fst_Analysis/Miracidia_samples.txt). 
@@ -47,7 +46,7 @@ This folder includes a [flowchart](https://github.com/Melkrewi/Schisto_project/b
 * Orthofinder was then run using the three transcriptomes to assign proteins to clusters of homologs (“orthogroups”) using [this script](https://github.com/Melkrewi/Schisto_project/blob/main/OrthoFinder/Running_OrthoFinder.sh).
 
 ## Kallisto
-
+Detailed description of the expression analysis using Kallisto can be found [here](https://github.com/Melkrewi/Schisto_project/blob/main/Kallisto/README.md)
 ## Transcriptome_Assemblies
 This folder has the steps we followed to assemble: 
 * The female transcriptome used to improve assembly of the S. japonicum W-candidates. The libararies we used can be found in [libraries.txt](https://github.com/Melkrewi/Schisto_project/blob/main/Transcriptome_Assemblies/Female_Sjap_transcriptome/libraries.txt), along with [the config file](https://github.com/Melkrewi/Schisto_project/blob/main/Transcriptome_Assemblies/Female_Sjap_transcriptome/soapconfig_trans.txt) and [the assembly script](https://github.com/Melkrewi/Schisto_project/blob/main/Transcriptome_Assemblies/Female_Sjap_transcriptome/SOAPdenovotrans.sh).
