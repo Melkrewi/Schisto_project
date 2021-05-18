@@ -1,8 +1,8 @@
 ############################################################
-# Expression analysis with Kallisto #
+# Supplementary Code 13: Expression analysis with Kallisto #
 ############################################################
 
-### Expression analysis in S. mansoni
+### 13.1 Expression analysis in S. mansoni
 
 1.kallisto_index_mans.sh
 The curated S. mansoni transcriptome (Sup. Code 11) was indexed for subsequent Kallisto analysis.
@@ -22,7 +22,7 @@ Script allowing the automatized download and Kallisto analysis for a given list 
 If single-end reads, the fragment size should be adapted on the Kallisto command line! For mansoni ERR libraries used here: [-l 180 -s 20]
 *Input: mansoni kallisto index + corresponding slurm-script-for-siliconer.sh
 
-### Expression analysis in S. japonicum
+### 13.2 Expression analysis in S. japonicum
 
 5.kallisto_index_jap.sh
 The curated S. japonicum transcriptome (Sup. Code 12) was indexed for subsequent Kallisto analysis.
