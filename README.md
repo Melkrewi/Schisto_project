@@ -1,7 +1,7 @@
 # Schisto_project
 Supplementary Code for Moldovan & Elkrewi et al. 
 
-This repository includes all the scripts and commands used in the analysis for Moldovan & Elkrewi et al. If anything is missing or not clear, please do not hesitate to reach out to us, and we will do out best to fix the issue or provide more details.
+This repository includes all the scripts and commands used in the analysis for Moldovan & Elkrewi et al. If anything is missing or not clear, please do not hesitate to reach out to us, and we will do our best to fix the issue or provide more details.
 
 Below is a rough guide to the content of each folder:
 
@@ -36,7 +36,7 @@ This folder includes a [flowchart](https://github.com/Melkrewi/Schisto_project/b
 * We used the in-house script [Splicefinder.pl](https://github.com/Melkrewi/Schisto_project/blob/Revised/Scripts/SpliceFinder_2.pl) to remove all the isoforms from the published transcriptomes of both species. 
 * We mapped our set of W-candidates and their homologs to their respective transcriptomes and removed any transcripts with matches > 100 bp and less than 5% divergence, and then we added our candidate set to the transcriptomes using the following scripts (the lists of the removed transcripts are provided in the same folder):
   * [S. mansoni Orthofinder](https://github.com/Melkrewi/Schisto_project/blob/main/Transcriptome_curation/Sman_OrthoFinder/Trans_curation_for_OrthoFinder.sh)
-  * [s. japonicum Orthofinder](https://github.com/Melkrewi/Schisto_project/blob/main/Transcriptome_curation/Sjap_OrthoFinder/Trans_curation_for_OrthoFinder.sh)
+  * [S. japonicum Orthofinder](https://github.com/Melkrewi/Schisto_project/blob/main/Transcriptome_curation/Sjap_OrthoFinder/Trans_curation_for_OrthoFinder.sh)
   * [S. mansoni Kallisto](https://github.com/Melkrewi/Schisto_project/blob/main/Transcriptome_curation/Sman_Kallisto/Trans_curation_for_Kallisto.sh)
   * [S. japonicum Kallisto](https://github.com/Melkrewi/Schisto_project/blob/main/Transcriptome_curation/Sjap_Kallisto/Trans_curation_for_Kallisto.sh)
 
