@@ -8,13 +8,9 @@
 
 2.soapcov_mansoni.sh script needs as inputs: sam outputs of script 1 + fasta file of the reference genome
 
-* InputFile1_Smansoni_SoapCov_By10kb_ForR_NewG.csv (i.e. modified output from script2) is used as input for the STEP1 of the R script titled 3.Zregions_Smansoni.R
+3.Zregions_Smansoni.R script needs as inputs: InputFile1_Smansoni_SoapCov_By10kb_ForR_NewG.csv (i.e. modified output from script2) for the STEP1 + inputFile2_Zonly_10kb.txt (output of STEP1) for the STEP2 
 
-* InputFile2_Zonly_10kb.txt is the output of STEP1, and is used as input for the STEP2 of the R script titled 3.Zregions_Smansoni.R
-
-* InputFile3_windows-to-exclude.csv is used as input for the script titled 4.GeneSelector.pl    
-
-* InputFile4_mansoni-gene-coordinates.csv is used as input for the script titled 4.GeneSelector.pl 
+4.GeneSelector.pl script needs as inputs: InputFile3_windows-to-exclude.csv + InputFile4_mansoni-gene-coordinates.csv 
 
 ### Inference of the location of  S. japonicum scaffolds along the S. mansoni Z-chromosome
 
